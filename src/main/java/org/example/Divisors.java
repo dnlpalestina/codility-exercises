@@ -1,49 +1,32 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class Divisors {
 
     public static void main(String[] args) {
-        int number = 529;
-        System.out.println("normal Solution:");
-        System.out.println(new Divisors().solution(number));
-        System.out.println("lambdas and streams Solution:");
-        System.out.println(new Divisors().functionalProgSolution(number));
+
+        System.out.println("Divisors");
+        //for every element in the array, calculate how many elements preceding it are it’s divisors
+        System.out.println(Arrays.toString(new Divisors().solution(new int[]{2,4,3,6})));
+        System.out.println(Arrays.toString(new Divisors().solution(new int[]{1,1,1,1,1})));
+        System.out.println(Arrays.toString(new Divisors().solution(new int[]{2,3,5})));
     }
 
-    public int solution(int N) {
-        // Get the binary representation as an array
-        String binaryRepresentation = Integer.toBinaryString(N);
-        System.out.println("binaryRepresentation = " + binaryRepresentation);
+    public int[] solution(int[] A) {
+        int[] result = new int[A.length];
 
-        int maxLength = 0;
-        int currentLength = 0;
-        boolean started = false;
-        for (int i = 0; i < binaryRepresentation.length(); i++) {
-            if (binaryRepresentation.charAt(i) == '1') {
-                if (started) {
-                    maxLength = Math.max(maxLength, currentLength);
+        for (int i = 0; i < A.length; i++) {
+            int divisorCount = 0;
+            for (int j = 0; j < i; j++) {
+                if (A[i] % A[j] == 0) {
+                    divisorCount++;
                 }
-                currentLength = 0;
-                started = true;
-            } else if (binaryRepresentation.charAt(i) == '0') {
-                currentLength++;
             }
+            result[i] = divisorCount;
         }
-        return maxLength;
-    }
 
-    public int functionalProgSolution(int N) {
-        // Get the binary representation as an array
-        String binaryRepresentation = Integer.toBinaryString(N);
-        System.out.println("binaryRepresentation = " + binaryRepresentation);
-        Stream.of(binaryRepresentation.split("1")).forEach(System.out::println);
-        // Split the binary representation by '1's, remove trailing zeros, and find the length of each part
-        return Stream.of(binaryRepresentation.split("1"))
-                .filter(part -> !part.isEmpty()) // Remove trailing zeros
-                .mapToInt(String::length) // Map each part to its length
-                .max() // Find the maximum length
-                .orElse(0);
+        return result;
     }
 }
