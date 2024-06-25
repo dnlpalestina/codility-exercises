@@ -1,34 +1,33 @@
 package org.example;
 
-import java.util.Arrays;
-import java.util.List;
+public class ContainerWithMostWaterTwoPointer {
 
-public class TwoSumIndexesTwoPointer {
-
-    // Return the indices of the numbers in the source list that add up to target
-    static List<Integer> getIndices(int[] array, int target) {
+    // Return the most water that could be contained by two of the delimiter walls provided
+    static int getMostWaterArea(int[] heights) {
         int leftPointer = 0;
-        int rightPointer = array.length - 1;
+        int rightPointer = heights.length - 1;
+        int mostWaterArea = 0;
 
         // until either our pointers meet (in which case we did not find a successful pair)
-        // or until we find a pair that sums to our target
+        // or until we find a pair of walls that could hold the most water
         while(leftPointer < rightPointer){
+            int width = rightPointer-leftPointer;
+            int currentMinHeight = Math.min(heights[leftPointer],heights[rightPointer]);//height of the shorter wall
+            int currentMostWaterArea = width*currentMinHeight;
 
-            int currentSum = array[leftPointer] + array[rightPointer];
-            if(currentSum==target){
-                return Arrays.asList(leftPointer, rightPointer);
-            } else if (currentSum<target) { //all other pairs involving our left pointer also have sums less than our target
+            mostWaterArea = Math.max(mostWaterArea, currentMostWaterArea);
+
+            // All other containers ending at the right pointer hold a smaller amount of water than our current container,
+            // so we eliminate them from our search by moving the right pointer.
+            if(heights[leftPointer]<heights[rightPointer]) {
                 leftPointer++;
-            } else { //all other pairs ending at our right pointer also have sums greater than our target
+            } else {
                 rightPointer--;
             }
-
         }
-
-        return Arrays.asList(-1,-1);
+        return mostWaterArea;
     }
     public static void main(String[] args) {
-        System.out.println(getIndices(new int[]{1, 3, 4, 6, 8, 10, 13}, 13));
-        System.out.println(getIndices(new int[]{2,3,4,5,7,7,8,9,17,13,19,55}, 24));
+        System.out.println(getMostWaterArea(new int[]{3,4,1,2,2,4,1,3,2}));
     }
 }

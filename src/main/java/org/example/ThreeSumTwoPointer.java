@@ -1,46 +1,52 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class CapturingRainwaterTwoPointer {
-    public static int captureWaterTwoPointerSolution(int[] heights) {
-        int totalWater = 0;
-        int leftPointer = 0;
-        int rightPointer = heights.length - 1;
-        int leftBound = 0;
-        int rightBound = 0;
-        while(leftPointer < rightPointer){
-//            System.out.println("Before!");
-//            System.out.println("leftPointer = " + leftPointer);
-//            System.out.println("leftBound = " + leftBound);
-//            System.out.println("rightPointer = " + rightPointer);
-//            System.out.println("rightBound = " + rightBound);
-//            System.out.println("totalWater = " + totalWater);
+public class ThreeSumTwoPointer {
+    public static List<int[]> getTriplets(int[] nums){
+        Arrays.sort(nums);
+        BubbleSort.bubbleSort(nums);
+        List<int[]> result = new ArrayList<>();
+        for (int i = 0; i < nums.length-2; i++) {
 
+            if (i>0 && nums[i]==nums[i-1])
+                continue;
 
-            //if the element at leftPointer <= the element at rightPointer:
-            if ( heights[leftPointer] <= heights[rightPointer] ){
-                leftBound = Math.max(heights[leftPointer], leftBound);
-                totalWater += leftBound - heights[leftPointer];
-                leftPointer++;
-            } else {
-                rightBound = Math.max(heights[rightPointer], rightBound);
-                totalWater += rightBound - heights[rightPointer];
-                rightPointer--;
+            int leftPointer = 0;
+            int rightPointer = nums.length - 1;
+            while(leftPointer<rightPointer){
+
+                int total = nums[i]+nums[leftPointer]+nums[rightPointer];
+
+                if (total<0) {
+                    leftPointer++;
+                } else if (total>0){
+                    rightPointer--;
+                } else {
+                    result.add( new int[]{ nums[i], nums[leftPointer], nums[rightPointer] } );
+                    while (leftPointer<rightPointer && nums[leftPointer]==nums[leftPointer+1]){
+                        leftPointer++;
+                    }
+                    while (leftPointer<rightPointer && nums[rightPointer]==nums[rightPointer-1]){
+                        rightPointer--;
+                    }
+                    leftPointer++;
+                    rightPointer--;
+                }
             }
-//            System.out.println("After!");
-//            System.out.println("leftPointer = " + leftPointer);
-//            System.out.println("leftBound = " + leftBound);
-//            System.out.println("rightPointer = " + rightPointer);
-//            System.out.println("rightBound = " + rightBound);
-//            System.out.println("totalWater = " + totalWater);
         }
-        return totalWater;
+        return result;
     }
-
     public static void main(String[] args) {
-        int[] heights = {3,4,1,2,2,5,1,0,2};
-        System.out.println("heights = " + Arrays.toString(heights));
-        System.out.println("water = " + captureWaterTwoPointerSolution(heights));
+        int[] nums = {-1,0,1,2,-1,-1};
+        System.out.println("nums = " + Arrays.toString(nums));
+        System.out.println("triplets = " );
+        getTriplets(nums)
+                .stream()
+                .map(Arrays::toString)
+                .forEach(System.out::println);
     }
 }

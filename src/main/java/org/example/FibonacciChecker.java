@@ -1,60 +1,32 @@
 package org.example;
 
-import java.util.HashMap;
-import java.util.Map;
+public class FibonacciChecker {
 
-public class IsAFibonacci {
-
-    // HashMap to store previously computed Fibonacci numbers
-    private static Map<Integer, Integer> memo = new HashMap<>();
-    private static Map<Integer, Integer> fibSequence = new HashMap<>();
-
-
-    // Function to return the n-th Fibonacci number
-    public static int fibonacci(Integer n) {
-        // Handle the edge case of negative numbers
-        if (n < 0) {
-            throw new IllegalArgumentException("Fibonacci sequence is not defined for negative numbers.");
-        }
-        if (n <= 1) {
-            // Base cases
-            return n;
-        } else {
-            // Check if the value is already in the memo map
-            if(memo.containsKey(n)){
-                System.out.println(memo.get(n));
-                fibSequence.put(memo.get(n), n);
-                return memo.get(n);
-            }
-            // Recursive calculation with memoization
-            // Sum of the previous two terms
-            Integer result = fibonacci(n - 2) + fibonacci(n - 1);
-            memo.put(n,result);
-            fibSequence.put(result, n);
-            System.out.println("result = " + result);
-            return result;
-        }
+    // Helper function to check if a number is a perfect square
+    private static boolean isPerfectSquare(int x) {
+        int s = (int) Math.sqrt(x);
+        return (s * s == x);
     }
 
-    public static boolean isFibonacci(Integer n){
+    // Function to check if a given number is a Fibonacci number
+    public static boolean isFibonacci(int n) {
+        // Check if one or both of 5n^2 + 4 or 5n^2 - 4 is a perfect square
+        int x1 = 5 * n * n + 4;
+        int x2 = 5 * n * n - 4;
 
-        Integer fibonacciNumber = fibonacci(n);
-        System.out.println("fibonacciNumber = " + fibonacciNumber);
-
-        for (Map.Entry<Integer, Integer> entry : fibSequence.entrySet()) {
-            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
-        }
-
-        // Check if the value is already in the memo map
-        if(fibSequence.containsKey(n)){
-            System.out.println("Value: " + fibSequence.get(n));
-            System.out.println("Equals!!!");
-            return true;
-        }
-        return false;
+        return isPerfectSquare(x1) || isPerfectSquare(x2);
     }
 
-    public static void main(String[] args){
-        System.out.println(isFibonacci(6));
+    public static void main(String[] args) {
+        // Test the function with some examples
+        int[] testNumbers = {0, 1, 2, 3, 4, 5, 8, 13, 21, 34, 55, 89, 144, 233};
+
+        for (int num : testNumbers) {
+            System.out.println(num + " is Fibonacci? " + isFibonacci(num));
+        }
+
+        // Test with a non-Fibonacci number
+        int nonFibo = 100;
+        System.out.println(nonFibo + " is Fibonacci? " + isFibonacci(nonFibo));
     }
 }

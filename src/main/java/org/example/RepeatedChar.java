@@ -1,8 +1,7 @@
-package org.globant;
+package org.example;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class RepeatedChar {

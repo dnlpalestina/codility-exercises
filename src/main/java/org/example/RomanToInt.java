@@ -1,32 +1,41 @@
 package org.example;
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
-public class CapturingRainwaterTwoPointer {
-    public static int captureWaterTwoPointerSolution(int[] heights) {
-        int totalWater = 0;
-        int leftPointer = 0;
-        int rightPointer = heights.length - 1;
-        int leftBound = 0;
-        int rightBound = 0;
-        while(leftPointer < rightPointer){
-            //if the element at leftPointer <= the element at rightPointer:
-            if ( heights[leftPointer] <= heights[rightPointer] ){
-                leftBound = Math.max(heights[leftPointer], leftBound);
-                totalWater += leftBound - heights[leftPointer];
-                leftPointer++;
+public class RomanToInt {
+    public static int getRomanToInt(String roman) {
+        int result = 0
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
+
+        for (int i = 0; i < roman.length(); i++) {
+            if (i<roman.length()-1 && map.get(roman.charAt(i))<map.get(roman.charAt(i+1))){
+                result -= map.get(roman.charAt(i));
             } else {
-                rightBound = Math.max(heights[rightPointer], rightBound);
-                totalWater += rightBound - heights[rightPointer];
-                rightPointer--;
+                result += map.get(roman.charAt(i));
             }
         }
-        return totalWater;
+        return result;
     }
 
     public static void main(String[] args) {
-        int[] heights = {3,4,1,2,2,5,1,0,2,0,2};
-        System.out.println("heights = " + Arrays.toString(heights));
-        System.out.println("water = " + captureWaterTwoPointerSolution(heights));
+        String roman = "IX";
+        System.out.println("roman = " + roman);
+        System.out.println("getRomanToInt(roman) = " + getRomanToInt(roman));
+
+        roman = "XI";
+        System.out.println("roman = " + roman);
+        System.out.println("getRomanToInt(roman) = " + getRomanToInt(roman));
+
+        roman = "MD";
+        System.out.println("roman = " + roman);
+        System.out.println("getRomanToInt(roman) = " + getRomanToInt(roman));
     }
 }

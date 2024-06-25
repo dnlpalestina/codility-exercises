@@ -3,50 +3,36 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class ThreeSumTwoPointer {
-    public static List<int[]> getTriplets(int[] nums){
+public class TriangleTripletsTwoPointer {
+    public static int getTriplets(int[] nums){
         Arrays.sort(nums);
         BubbleSort.bubbleSort(nums);
-        List<int[]> result = new ArrayList<>();
-        for (int i = 0; i < nums.length-2; i++) {
+        int countResult = 0;
 
-            if (i>0 && nums[i]==nums[i-1])
-                continue;
-
+        for (int i = nums.length-1; i > 1; i--) {
             int leftPointer = 0;
-            int rightPointer = nums.length - 1;
-            while(leftPointer<rightPointer){
-
-                int total = nums[i]+nums[leftPointer]+nums[rightPointer];
-
-                if (total<0) {
-                    leftPointer++;
-                } else if (total>0){
+            int rightPointer = i-1;
+            while (leftPointer<rightPointer){
+                if(nums[leftPointer]+nums[rightPointer]>nums[i]){
+                    System.out.println("Main Combination = "
+                            + Arrays.toString(new int[]{nums[leftPointer], nums[rightPointer], nums[i]}));
+                    System.out.println("leftPointer = " + leftPointer);
+                    System.out.println("rightPointer = " + rightPointer);
+                    countResult += rightPointer-leftPointer;
                     rightPointer--;
-                } else {
-                    result.add( new int[]{ nums[i], nums[leftPointer], nums[rightPointer] } );
-                    while (leftPointer<rightPointer && nums[leftPointer]==nums[leftPointer+1]){
-                        leftPointer++;
-                    }
-                    while (leftPointer<rightPointer && nums[rightPointer]==nums[rightPointer-1]){
-                        rightPointer--;
-                    }
+                }else {
                     leftPointer++;
-                    rightPointer--;
                 }
             }
         }
-        return result;
+        return countResult;
     }
     public static void main(String[] args) {
-        int[] nums = {-1,0,1,2,-1,-1};
+        int[] nums = {11,4,9,6,15,18};
         System.out.println("nums = " + Arrays.toString(nums));
         System.out.println("triplets = " );
-        getTriplets(nums)
-                .stream()
-                .map(Arrays::toString)
-                .forEach(System.out::println);
+        System.out.println("getTriplets(nums) = " +
+                "" + getTriplets(nums));
     }
 }

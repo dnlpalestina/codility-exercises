@@ -5,15 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1c7be84-5a2c-4ffd-962b-97d8f8ad75bf" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HighestGrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LargestPossibleWoodenSticks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MaxArraySum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/calculatorCodeReview.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/getTheBestAvgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mostWordsFound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Anagrams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BalancedJobsAssignment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BalancedJobsAssignmentRandomized.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CapturingRainwater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CapturingRainwaterTwoPointer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ConsecutiveSumExists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ContainerWithMostWaterTwoPointer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DuplicateCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/EvenOrOdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Fibonacci.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FibonacciChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FindIncompleteVolunteers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FindTrueIndices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FizzBuzz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FruitCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Knapsack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PasswordComplexChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/RepeatedChar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ReversingCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/RomanToInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SieveOfEratosthenes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SieveOfEratosthenesOptimized.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ThreeSumTwoPointer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TriangleTripletsTwoPointer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TwoSumIndexes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TwoSumIndexesTwoPointer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/peakElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/EvenOrOddTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FindIncompleteVolunteersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Divisors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Divisors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +48,43 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="codility-exercises" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="codility-exercises" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="codility-exercises" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,22 +100,61 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.IsAFibonacci.executor": "Run",
+    "Gradle.Build codility-exercises.executor": "Run",
+    "Gradle.EvenOrOddTest.executor": "Run",
+    "Gradle.FindIncompleteVolunteersTest.executor": "Run",
+    "Gradle.codility-exercises [:Anagrams.main()].executor": "Run",
+    "Gradle.codility-exercises [:BalancedJobAssignment.main()].executor": "Run",
+    "Gradle.codility-exercises [:BalancedJobsAssignment.main()].executor": "Run",
+    "Gradle.codility-exercises [:BalancedJobsAssignmentRandomized.main()].executor": "Run",
+    "Gradle.codility-exercises [:BinaryGap.main()].executor": "Run",
+    "Gradle.codility-exercises [:CapturingRainwater.main()].executor": "Run",
+    "Gradle.codility-exercises [:CapturingRainwaterTwoPointer.main()].executor": "Run",
+    "Gradle.codility-exercises [:ConsecutiveSumExists.main()].executor": "Run",
+    "Gradle.codility-exercises [:ContainerWithMostWaterTwoPointer.main()].executor": "Run",
     "Gradle.codility-exercises [:Divisors.main()].executor": "Run",
+    "Gradle.codility-exercises [:DuplicateCharacters.main()].executor": "Run",
+    "Gradle.codility-exercises [:EvenOrOdd.main()].executor": "Run",
+    "Gradle.codility-exercises [:Fibonacci.main()].executor": "Run",
+    "Gradle.codility-exercises [:FibonacciChecker.main()].executor": "Run",
+    "Gradle.codility-exercises [:FindIncompleteVolunteers.main()].executor": "Run",
+    "Gradle.codility-exercises [:FindTrueIndices.main()].executor": "Run",
+    "Gradle.codility-exercises [:FizzBuzz.main()].executor": "Run",
+    "Gradle.codility-exercises [:FruitCounter.main()].executor": "Run",
     "Gradle.codility-exercises [:HighestGrade.main()].executor": "Run",
+    "Gradle.codility-exercises [:IsAFibonacci.main()].executor": "Run",
+    "Gradle.codility-exercises [:Knapsack.main()].executor": "Run",
     "Gradle.codility-exercises [:LargestPossibleWoodenSticks.main()].executor": "Run",
     "Gradle.codility-exercises [:Main.main()].executor": "Run",
     "Gradle.codility-exercises [:MaxArraySum.main()].executor": "Run",
+    "Gradle.codility-exercises [:OddOccurrencesInArray.main()].executor": "Run",
+    "Gradle.codility-exercises [:PasswordComplexChecker.main()].executor": "Run",
+    "Gradle.codility-exercises [:QuickSort.main()].executor": "Run",
+    "Gradle.codility-exercises [:RepeatedChar.main()].executor": "Run",
+    "Gradle.codility-exercises [:ReversingCharacters.main()].executor": "Run",
+    "Gradle.codility-exercises [:RomanToInt.main()].executor": "Run",
+    "Gradle.codility-exercises [:SieveOfEratosthenes.main()].executor": "Run",
+    "Gradle.codility-exercises [:SieveOfEratosthenesOptimized.main()].executor": "Run",
+    "Gradle.codility-exercises [:TapeEquilibrium.main()].executor": "Run",
+    "Gradle.codility-exercises [:ThreeSumTwoPointer.main()].executor": "Run",
+    "Gradle.codility-exercises [:TriangleTripletsTwoPointer.main()].executor": "Run",
+    "Gradle.codility-exercises [:TwoSumIndexes.main()].executor": "Run",
+    "Gradle.codility-exercises [:TwoSumIndexesTwoPointer.main()].executor": "Run",
+    "Gradle.codility-exercises [:TwoSumIndexesTwoPointerNew.main()].executor": "Run",
     "Gradle.codility-exercises [:calculatorCodeReview.main()].executor": "Run",
     "Gradle.codility-exercises [:getTheBestAvgs.main()].executor": "Run",
     "Gradle.codility-exercises [:mostWordsFound.main()].executor": "Run",
+    "Gradle.codility-exercises [:peakElements.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/danielpalestina/Downloads/Dev/codility-exercises",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -65,9 +165,9 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MaxArraySum">
-    <configuration name="HighestGrade" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.HighestGrade" />
+  <component name="RunManager" selected="Application.RomanToInt">
+    <configuration name="CapturingRainwaterTwoPointer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.CapturingRainwaterTwoPointer" />
       <module name="codility-exercises.main" />
       <extension name="coverage">
         <pattern>
@@ -79,8 +179,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaxArraySum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.MaxArraySum" />
+    <configuration name="ContainerWithMostWaterTwoPointer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ContainerWithMostWaterTwoPointer" />
       <module name="codility-exercises.main" />
       <extension name="coverage">
         <pattern>
@@ -92,8 +192,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="calculatorCodeReview" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.calculatorCodeReview" />
+    <configuration name="RomanToInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.RomanToInt" />
       <module name="codility-exercises.main" />
       <extension name="coverage">
         <pattern>
@@ -105,8 +205,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="getTheBestAvgs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.getTheBestAvgs" />
+    <configuration name="ThreeSumTwoPointer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ThreeSumTwoPointer" />
       <module name="codility-exercises.main" />
       <extension name="coverage">
         <pattern>
@@ -118,8 +218,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mostWordsFound" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.mostWordsFound" />
+    <configuration name="TriangleTripletsTwoPointer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.TriangleTripletsTwoPointer" />
       <module name="codility-exercises.main" />
       <extension name="coverage">
         <pattern>
@@ -133,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MaxArraySum" />
-        <item itemvalue="Application.HighestGrade" />
-        <item itemvalue="Application.calculatorCodeReview" />
-        <item itemvalue="Application.getTheBestAvgs" />
-        <item itemvalue="Application.mostWordsFound" />
+        <item itemvalue="Application.RomanToInt" />
+        <item itemvalue="Application.TriangleTripletsTwoPointer" />
+        <item itemvalue="Application.ThreeSumTwoPointer" />
+        <item itemvalue="Application.CapturingRainwaterTwoPointer" />
+        <item itemvalue="Application.ContainerWithMostWaterTwoPointer" />
       </list>
     </recent_temporary>
   </component>
